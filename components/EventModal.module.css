@@ -1,0 +1,89 @@
+.someCSSModulesClass :global .any-global-class {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Event Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Form */
+.modalContent {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.modal h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Input and Textarea Fields */
+.modal label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modal input,
+.modal textarea {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.modal input[type="date"] {
+  font-size: 14px;
+}
+
+/* Buttons in Modal */
+.modal button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    padding: 20px;
+    width: 90%;
+  }
+}

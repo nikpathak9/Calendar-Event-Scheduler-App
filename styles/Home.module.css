@@ -1,0 +1,33 @@
+/* Styling for the h1 title */
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #333;
+  margin: 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #111212, #09c0f2);
+  background-clip: text;
+  color: transparent;
+  box-shadow: 2px 0px 2px 0px;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+    margin: 15px 0;
+  }
+}

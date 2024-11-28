@@ -1,0 +1,217 @@
+.someCSSModulesClass :global .any-global-class {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Calendar Container */
+.calendarContainer {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden; /* Prevent overflow from spilling out */
+}
+
+/* Header with Month Navigation */
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.calendarHeader button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.calendarHeader button:hover {
+  background-color: #0056b3;
+}
+
+.calendarHeader span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Calendar Wrapper */
+.calendarWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Calendar Grid */
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  grid-auto-rows: minmax(80px, auto);
+  padding-bottom: 10px;
+}
+
+.calendarDay {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.calendarDay.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.calendarDay.disabled {
+  background-color: #f0f0f0;
+  color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+/* Event Markers */
+.eventMarker {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background-color: #8b373a;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+/* Event Creation*/
+.eventCreation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 1rem;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventCreation h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.eventCreation button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.eventCreation button:hover {
+  background-color: #0056b3;
+}
+
+/* Event List Below the Calendar */
+.eventsList {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eventItem {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.eventTitle {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.eventDescription {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.eventActions {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.eventActions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.eventActions button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calendarGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .calendarHeader span {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .modalContent {
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendarGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .calendarHeader span {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .calendarHeader button {
+    margin-top: 10px;
+  }
+}
