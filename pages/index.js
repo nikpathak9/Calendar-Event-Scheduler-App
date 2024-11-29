@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <header>
-        <h1 className={styles.title}>Event Scheduler</h1>{" "}
+        <h1 className={styles.title}>Event Scheduler</h1>
       </header>
       <Calendar
         events={events}
